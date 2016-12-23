@@ -13,15 +13,14 @@ class ParenthesisParserTest extends PHPUnit_Framework_TestCase
             ['Este (texto (de prueba (sirve) para (probar (si) anda).', false]
         ];
     }
-    
-    
+
     /**
      * @expectedException Exception
      * @expectedExceptionMessage Not a string.
      */
     public function testExceptionWhenNotString()
     {
-        $parenPaser = new ParenthesisParser(1);   
+        $parenParser = new ParenthesisParser(1);
     }
 
     /**
@@ -30,16 +29,16 @@ class ParenthesisParserTest extends PHPUnit_Framework_TestCase
      */
     public function testExceptionWhenEmpty()
     {
-        $parenPaser = new ParenthesisParser(''); 
+        $parenParser = new ParenthesisParser('');
     }
-    
+
     /**
      * @dataProvider testStringProvider
      */
     public function testAreClosedCorrectly($string, $expected)
     {
-        $parenPaser = new ParenthesisParser($string);
-        $result = $parenPaser->areClosedCorrectly();
+        $parenParser = new ParenthesisParser($string);
+        $result = $parenParser->areClosedCorrectly();
         $this->assertEquals($expected, $result);
     }
 }
