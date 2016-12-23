@@ -1,0 +1,17 @@
+{
+    "name": "emporio/problem1",
+    "description": "Algorithm to test correct parentheses open/closing",
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alan Moreno",
+            "email": "alan.nicmor@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": ["src/"]
+    }
+}
